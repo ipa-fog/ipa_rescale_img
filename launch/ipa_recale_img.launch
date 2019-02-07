@@ -12,6 +12,6 @@
 
             <!--set parameters -->
             <param name="rescale_factor" value="0.25" />             <!-- rescaling input resolution -->
-            <param name="reduce_fps" value="2" />                   <!-- skip each x img -->
+            <param name="reduce_fps" value="2" />                   <!-- reduce FPS by 1/value -->
         </node>
 </launch>
