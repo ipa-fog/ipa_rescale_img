@@ -31,12 +31,15 @@ private:
     int counter = 0;
     ros::Subscriber sub_img_one;
     ros::Subscriber sub_img_two;
+    ros::Subscriber sub_img_three;
 
     ros::Publisher pub_img_one;
     ros::Publisher pub_img_two;
 
     void img1Callback(const sensor_msgs::CompressedImageConstPtr& msg);
-    void img2Callback(const sensor_msgs::Image::ConstPtr& msg);
+    void img2Callback(const sensor_msgs::CompressedImageConstPtr& msg);
+    void img3Callback(const sensor_msgs::CompressedImageConstPtr& msg);
+
 
 };
 
