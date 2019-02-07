@@ -6,8 +6,8 @@ Scales down and reduce FPS from camera images.
 
 # Parameter Setting:
 
-Param:  rescale_factor  is used to resize input image in Percentages
-Param:  reduce_fps  is used to skip  x times before processing next frame
+- Param:  rescale_factor  is used to resize input image in Percentages
+- Param:  reduce_fps  is used to skip  x times before processing next frame
 
 
 ## Example Bandwidth of color images:
