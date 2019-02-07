@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <launch>
         <!-- LAUNCH NODE -->
-        <node name="/ipa_recale_img_node" pkg="ipa_recale_img" type="ipa_recale_img_node" output="screen">
+        <node name="ipa_rescale_img_node" pkg="ipa_rescale_img" type="ipa_rescale_img_node" output="screen">
 
             <!--define topic names -->
-            <remap from="img_bgr1_in" to="/camera/rgb/image_raw"/>
-            <remap from="img_bgr1_out" to="camera_one/color/image_resized"/>
+            <remap from="img_bgr1_in" to="/camera/rgb/image_raw/compressed"/>
+            <remap from="img_bgr1_out" to="output1"/>
 
-            <remap from="img_bgr2_in" to="camera_two/color/image_raw"/>
-            <remap from="img_bgr2_out" to="camera_two/color/image_resized"/>
+            <remap from="img_bgr2_in" to="/camera/rgb/image_raw/compressed2"/>
+            <remap from="img_bgr2_out" to="outpu2"/>
 
             <!--set parameters -->
-            <param name="rescale_factor" value="0.2" />             <!--    < 1.0 is smaller than input resolution -->
-            <param name="reduce_fps" value="2" />                   <!--skip each x img-->
+            <param name="rescale_factor" value="0.25" />             <!-- rescaling input resolution -->
+            <param name="reduce_fps" value="2" />                   <!-- skip each x img -->
         </node>
 </launch>
